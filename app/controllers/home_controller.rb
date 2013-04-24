@@ -36,7 +36,10 @@ class HomeController < ApplicationController
     end
     @json = sanitized_hash.to_json
     @pretty = JSON.pretty_generate(sanitized_hash)
-    @resp = RestClient.post "https://showmojo.com/api/v1/listings", @json, {
+
+
+
+    @resp = HomeController.post "https://showmojo.com/api/v1/listings", @json, {
         :content_type => 'application/json',
         :accept => 'application/json',
         :authorization => 'Token token="109b38d4a46467647de54294a570a3b3"'
@@ -45,4 +48,9 @@ class HomeController < ApplicationController
     end
     #'Authorization:	Token	token="109b38d4a46467647de54294a570a3b3"'	\
   end
+
+  def self.post(url, payload, headers={}, &block)
+    RestClient::Request.execute(:method => :post, :url => url, :timeout => 90000000, :payload => payload, :headers => headers,  &block)
+  end
+
 end

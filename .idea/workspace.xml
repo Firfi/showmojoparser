@@ -4,7 +4,7 @@
     <list default="true" id="75932211-2519-467c-b1c5-5ac5abb6c55f" name="Default" comment="" />
     <ignored path="showmojoparser.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/home_controller.rb" changelist="75932211-2519-467c-b1c5-5ac5abb6c55f" time="1366835065810" ignored="false" />
+    <file path="/home_controller.rb" changelist="75932211-2519-467c-b1c5-5ac5abb6c55f" time="1366835563452" ignored="false" />
     <file path="/routes.rb" changelist="75932211-2519-467c-b1c5-5ac5abb6c55f" time="1366826993949" ignored="false" />
     <file path="/index.html.erb" changelist="75932211-2519-467c-b1c5-5ac5abb6c55f" time="1366834604290" ignored="false" />
     <file path="/Gemfile" changelist="75932211-2519-467c-b1c5-5ac5abb6c55f" time="1366830646119" ignored="false" />
@@ -96,7 +96,7 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="7" selection-start="1697" selection-end="1998" vertical-scroll-proportion="0.7043757">
+            <state line="52" column="23" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.8342246">
               <folding />
             </state>
           </provider>
@@ -141,7 +141,7 @@
     <option name="x" value="10" />
     <option name="y" value="22" />
     <option name="width" value="1580" />
-    <option name="height" value="1103" />
+    <option name="height" value="1101" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -571,7 +571,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="22" width="1580" height="1103" extended-state="0" />
+    <frame x="10" y="22" width="1580" height="1101" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -700,7 +700,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="7" selection-start="1697" selection-end="1998" vertical-scroll-proportion="0.7043757">
+        <state line="52" column="23" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.8342246">
           <folding />
         </state>
       </provider>
