@@ -19,7 +19,7 @@ class HomeController < ApplicationController
           :title => details['title'],
           :square_feet => details['details']['sqft'],
           :highlights => details['details']['property_features'],
-          :images => details['photos'].reject{|k, v| k.starts_with? 'photo_caption'}.map{|k, v| v}
+          #:images => details['photos'].reject{|k, v| k.starts_with? 'photo_caption'}.map{|k, v| v}
 
       }
       bedrooms = details['details']['bedrooms']
@@ -29,7 +29,6 @@ class HomeController < ApplicationController
       partial_bathrooms = details['details']['partial_bathrooms']
       new_listing['partial_bathrooms'] = partial_bathrooms if partial_bathrooms
       pets = details['details']['pets'].split(', ').reject{|pet| pet == 'No pets'}.map{|pet| pet + ' ok'}
-      puts pets
       new_listing['pets'] = pets unless pets.empty? # can't be empty array in api
       new_listing['rent'] = details['details']['money']['price'] if details['details']['property_for'] == 'Rent'
       sanitized_hash[:listings] << new_listing
@@ -39,14 +38,14 @@ class HomeController < ApplicationController
 
 
 
-    @resp = HomeController.post "https://showmojo.com/api/v1/listings", @json, {
+    @resp = HomeController.post "localhost:3000/api/v1/listings", @json, {      # https://showmojo.com/api/v1/listings
         :content_type => 'application/json',
         :accept => 'application/json',
-        :authorization => 'Token token="109b38d4a46467647de54294a570a3b3"'
+        :authorization => 'Token token="35c42a57e503e7139d3e8d17660b7478"'
     } do |response, request, result, &block|
         response
     end
-    #'Authorization:	Token	token="109b38d4a46467647de54294a570a3b3"'	\
+    #'Authorization:	Token	token="109b38d4a46467647de54294a570a3b3"'	 # remote test
   end
 
   def self.post(url, payload, headers={}, &block)
